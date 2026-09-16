@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | FoundationGuard Basement Waterproofing & Structural Repair</title>
+  <meta name="description" content="Explore complete basement waterproofing, foundation crack repair, helical pier installation, sump pumps, and drainage solutions. Free structural analysis.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="fg-header-main">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light py-2">
+        <a class="navbar-brand fg-logo-brand me-4" href="index.html">
+          <div class="fg-logo-icon"><i class="bi bi-shield-lock-fill"></i></div>
+          <div>
+            <span>Foundation<span class="text-warning">Guard</span></span>
+            <span class="d-block text-muted fw-normal" style="font-size: 0.68rem; letter-spacing: 0.05em; margin-top: -3px;">STRUCTURAL PROTECTION</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler border-0 p-2 d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#fgMobileNav"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex">
+          <ul class="navbar-menu navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link fg-nav-link dropdown-toggle" href="index.html" data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu fg-dropdown-menu">
+                <li><a class="dropdown-item fg-dropdown-item" href="index.html">Home 1 - Main</a></li>
+                <li><a class="dropdown-item fg-dropdown-item" href="home-2.html">Home 2 - Technical Edition</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link fg-nav-link active" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link fg-nav-link" href="before-after.html">Before & After</a></li>
+            <li class="nav-item"><a class="nav-link fg-nav-link" href="pricing.html">Pricing Guide</a></li>
+            <li class="nav-item"><a class="nav-link fg-nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link fg-nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="fg-rtl-btn" type="button" aria-label="Toggle RTL Layout">RTL</button>
+            <button class="fg-theme-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+            <button class="btn btn-fg-primary" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">Free Inspection</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas -->
+  <div class="offcanvas offcanvas-end fg-offcanvas" tabindex="-1" id="fgMobileNav">
+    <div class="offcanvas-header border-bottom">
+      <div class="fg-logo-brand fs-5"><div class="fg-logo-icon" style="width:34px; height:34px;"><i class="bi bi-shield-lock-fill"></i></div><span>Foundation<span class="text-warning">Guard</span></span></div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <div class="mobile-nav-links">
+        <!-- Accordion Mobile Dropdowns -->
+        <div class="accordion accordion-flush" id="mobileNavAccordion3">
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button fg-mobile-nav-link bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileHome3">
+                Home
+              </button>
+            </h2>
+            <div id="mobileHome3" class="accordion-collapse collapse" data-bs-parent="#mobileNavAccordion3">
+              <div class="accordion-body py-1">
+                <a class="fg-mobile-nav-link fg-mobile-sublink" href="index.html" data-bs-dismiss="offcanvas">Home 1 - Main</a>
+                <a class="fg-mobile-nav-link fg-mobile-sublink" href="home-2.html" data-bs-dismiss="offcanvas">Home 2 - Technical Contractor</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="fg-mobile-nav-link mt-2 active" href="services.html" data-bs-dismiss="offcanvas">Services</a>
+        <a class="fg-mobile-nav-link" href="before-after.html" data-bs-dismiss="offcanvas">Before & After</a>
+        <a class="fg-mobile-nav-link" href="pricing.html" data-bs-dismiss="offcanvas">Pricing Guide</a>
+        <a class="fg-mobile-nav-link" href="about.html" data-bs-dismiss="offcanvas">About Us</a>
+        <a class="fg-mobile-nav-link" href="contact.html" data-bs-dismiss="offcanvas">Contact Us</a>
+      </div>
+
+      <div class="mobile-nav-footer pt-4 border-top">
+        <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+          <span class="fw-bold small text-muted">Theme & Mode</span>
+          <div class="d-flex align-items-center gap-2">
+            <button class="fg-rtl-btn" type="button" aria-label="Toggle RTL Layout">RTL</button>
+            <button class="fg-theme-btn" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+          </div>
+        </div>
+        <button class="btn btn-fg-primary w-100" data-bs-toggle="modal" data-bs-target="#freeInspectionModal" data-bs-dismiss="offcanvas">
+          <i class="bi bi-clipboard-check-fill me-2"></i> Free Inspection
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="fg-section fg-bg-navy text-white text-center py-5">
+    <div class="container max-w-800">
+      <span class="fg-badge bg-warning text-dark border-0 mb-3"><i class="bi bi-gear-wide-connected"></i> COMPLETE CAPABILITIES</span>
+      <h1 class="display-4 text-white fw-bold mb-3">Structural Repair & Waterproofing Services</h1>
+      <p class="lead text-muted mb-0">Engineered structural defense systems designed to permanently stop water intrusion, repair foundation cracks, and lift settling footings.</p>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <section class="py-4 border-bottom fg-bg-subtle">
+    <div class="container d-flex flex-wrap justify-content-center gap-2">
+      <button class="fg-filter-btn active" data-filter="all">All Services</button>
+      <button class="fg-filter-btn" data-filter="cracks">Crack Repair</button>
+      <button class="fg-filter-btn" data-filter="waterproofing">Waterproofing</button>
+      <button class="fg-filter-btn" data-filter="sump">Sump Pumps</button>
+      <button class="fg-filter-btn" data-filter="foundation">Foundation Piering</button>
+      <button class="fg-filter-btn" data-filter="drainage">Drainage</button>
+    </div>
+  </section>
+
+  <!-- SERVICE CATALOG CARDS -->
+  <section class="fg-section">
+    <div class="container">
+      
+      <div class="row g-5 fg-services-catalog-row">
+        
+        <!-- SERVICE 1 -->
+        <div class="col-xl-6 col-lg-6 fg-filter-item" data-category="cracks" id="crack-repair">
+          <div class="fg-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="fg-card-icon mb-0"><i class="bi bi-tools"></i></div>
+              <div>
+                <h3 class="fw-bold mb-0">Foundation Crack Repair</h3>
+                <span class="badge bg-warning-subtle text-warning border">Structural & Moisture Barrier</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-danger mb-1"><i class="bi bi-exclamation-circle me-1"></i> The Problem:</h6>
+              <p class="small text-muted mb-0">Hydrostatic water pressure forces moisture through poured concrete fissures or block wall mortar joints, threatening basement dry integrity.</p>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-success mb-1"><i class="bi bi-check-circle me-1"></i> Our Solution:</h6>
+              <p class="small text-muted mb-0">Dual-stage structural epoxy injection to fuse concrete fractures combined with high-tensile carbon fiber grid straps to prevent future wall bowing.</p>
+            </div>
+
+            <div class="p-3 bg-body-tertiary rounded-3 mb-4">
+              <h6 class="fw-bold small mb-2">Key Benefits & Specs:</h6>
+              <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+                <li>• Resists up to 10,000 PSI concrete bonding strength</li>
+                <li>• Prevents radon gas and damp soil air infiltration</li>
+                <li>• Fast 2 to 4 hour clean interior installation</li>
+              </ul>
+            </div>
+
+            <div class="mt-auto d-flex gap-2">
+              <a href="service-details.html" class="btn btn-fg-primary w-50">View Full Specs →</a>
+              <button class="btn btn-fg-outline w-50" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">Get Quote</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICE 2 -->
+        <div class="col-lg-6 fg-filter-item" data-category="foundation" id="foundation-repair">
+          <div class="fg-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="fg-card-icon mb-0"><i class="bi bi-building"></i></div>
+              <div>
+                <h3 class="fw-bold mb-0">Foundation Piering & Repair</h3>
+                <span class="badge bg-primary-subtle text-primary border">Deep Structural Stabilization</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-danger mb-1"><i class="bi bi-exclamation-circle me-1"></i> The Problem:</h6>
+              <p class="small text-muted mb-0">Unstable subfloor clay soils cause foundation footings to drop, creating diagonal drywall cracks, sticking doors, and floor tilt.</p>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-success mb-1"><i class="bi bi-check-circle me-1"></i> Our Solution:</h6>
+              <p class="small text-muted mb-0">Galvanized steel helical piers and push piers hydraulically driven past weak soil strata into bedrock to stabilize and lift foundation footings.</p>
+            </div>
+
+            <div class="p-3 bg-body-tertiary rounded-3 mb-4">
+              <h6 class="fw-bold small mb-2">Key Benefits & Specs:</h6>
+              <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+                <li>• Restores structural load distribution</li>
+                <li>• Engineer-calculated hydraulic lifting system</li>
+                <li>• Lifetime transferable footing support</li>
+              </ul>
+            </div>
+
+            <div class="mt-auto d-flex gap-2">
+              <button class="btn btn-fg-primary w-50" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">Request Assessment</button>
+              <a href="pricing.html" class="btn btn-fg-outline w-50">Pricing Info</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICE 3 -->
+        <div class="col-lg-6 fg-filter-item" data-category="waterproofing" id="waterproofing">
+          <div class="fg-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="fg-card-icon mb-0"><i class="bi bi-droplet-half"></i></div>
+              <div>
+                <h3 class="fw-bold mb-0">Basement Waterproofing</h3>
+                <span class="badge bg-info-subtle text-info border">Perimeter Drainage Track</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-danger mb-1"><i class="bi bi-exclamation-circle me-1"></i> The Problem:</h6>
+              <p class="small text-muted mb-0">Subterranean water tables exert cove joint pressure, causing floor seam leaks and flooded finished basements.</p>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-success mb-1"><i class="bi bi-check-circle me-1"></i> Our Solution:</h6>
+              <p class="small text-muted mb-0">Sub-slab interior perimeter drain tile system embedded in washed aggregate, capturing ground water and routing it to a high-capacity sump pit.</p>
+            </div>
+
+            <div class="p-3 bg-body-tertiary rounded-3 mb-4">
+              <h6 class="fw-bold small mb-2">Key Benefits & Specs:</h6>
+              <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+                <li>• Clog-resistant perimeter channel design</li>
+                <li>• Relieves hydrostatic floor pressure permanently</li>
+                <li>• Compatible with future basement finishing</li>
+              </ul>
+            </div>
+
+            <div class="mt-auto d-flex gap-2">
+              <button class="btn btn-fg-primary w-50" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">Free Analysis</button>
+              <a href="before-after.html" class="btn btn-fg-outline w-50">View Photos</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICE 4 -->
+        <div class="col-lg-6 fg-filter-item" data-category="sump" id="sump-pump">
+          <div class="fg-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="fg-card-icon mb-0"><i class="bi bi-gear-wide-connected"></i></div>
+              <div>
+                <h3 class="fw-bold mb-0">Sump Pump Installation</h3>
+                <span class="badge bg-secondary-subtle text-secondary border">Dual Pump Station</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-danger mb-1"><i class="bi bi-exclamation-circle me-1"></i> The Problem:</h6>
+              <p class="small text-muted mb-0">Single primary sump pumps fail during power outages, leading to sudden basement flooding during heavy rainstorms.</p>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-success mb-1"><i class="bi bi-check-circle me-1"></i> Our Solution:</h6>
+              <p class="small text-muted mb-0">Cast-iron primary pump paired with an automatic battery-backup secondary pump and check valves in a sealed structural basin.</p>
+            </div>
+
+            <div class="p-3 bg-body-tertiary rounded-3 mb-4">
+              <h6 class="fw-bold small mb-2">Key Benefits & Specs:</h6>
+              <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+                <li>• Discharges up to 4,200 Gallons Per Hour</li>
+                <li>• Smart battery charger & audible high-water alarm</li>
+                <li>• Quiet, energy-efficient motor assembly</li>
+              </ul>
+            </div>
+
+            <div class="mt-auto d-flex gap-2">
+              <button class="btn btn-fg-primary w-50" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">Install Quote</button>
+              <a href="pricing.html" class="btn btn-fg-outline w-50">Pricing Guide</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICE 5 -->
+        <div class="col-lg-6 fg-filter-item" data-category="waterproofing" id="basement-sealing">
+          <div class="fg-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="fg-card-icon mb-0"><i class="bi bi-layers-fill"></i></div>
+              <div>
+                <h3 class="fw-bold mb-0">Basement Sealing & Encapsulation</h3>
+                <span class="badge bg-success-subtle text-success border">Vapor Control</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-danger mb-1"><i class="bi bi-exclamation-circle me-1"></i> The Problem:</h6>
+              <p class="small text-muted mb-0">Unsealed porous masonry walls release ground humidity, creating damp odors, mold growth, and drywall rot.</p>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-success mb-1"><i class="bi bi-check-circle me-1"></i> Our Solution:</h6>
+              <p class="small text-muted mb-0">Heavy-duty 20-mil antimicrobial vapor barrier wall liners sealed with mechanical fast-pins and waterproof polyurethane joint caulk.</p>
+            </div>
+
+            <div class="p-3 bg-body-tertiary rounded-3 mb-4">
+              <h6 class="fw-bold small mb-2">Key Benefits & Specs:</h6>
+              <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+                <li>• 100% moisture vapor diffusion seal</li>
+                <li>• Clean bright white semi-gloss finish</li>
+                <li>• Reduces home heating/cooling energy loss</li>
+              </ul>
+            </div>
+
+            <div class="mt-auto d-flex gap-2">
+              <button class="btn btn-fg-primary w-50" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">Schedule Sealing</button>
+              <a href="contact.html" class="btn btn-fg-outline w-50">Contact Us</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICE 6 -->
+        <div class="col-lg-6 fg-filter-item" data-category="drainage" id="drainage">
+          <div class="fg-card p-4 h-100">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="fg-card-icon mb-0"><i class="bi bi-diagram-3-fill"></i></div>
+              <div>
+                <h3 class="fw-bold mb-0">Exterior Drainage & Water Management</h3>
+                <span class="badge bg-warning-subtle text-warning border">Yard Drainage</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-danger mb-1"><i class="bi bi-exclamation-circle me-1"></i> The Problem:</h6>
+              <p class="small text-muted mb-0">Roof downspouts discharging water against foundation walls create soil erosion and heavy hydro-static pressure.</p>
+            </div>
+
+            <div class="mb-3">
+              <h6 class="fw-bold text-success mb-1"><i class="bi bi-check-circle me-1"></i> Our Solution:</h6>
+              <p class="small text-muted mb-0">Burying downspout extension lines, pop-up emitters, exterior French drains, and surface re-grading to safely discharge runoff away from home foundation.</p>
+            </div>
+
+            <div class="p-3 bg-body-tertiary rounded-3 mb-4">
+              <h6 class="fw-bold small mb-2">Key Benefits & Specs:</h6>
+              <ul class="list-unstyled small text-muted mb-0 d-flex flex-column gap-1">
+                <li>• Prevents pool formation against foundation</li>
+                <li>• Heavy PVC smooth bore pipe (non-clogging)</li>
+                <li>• Blends seamlessly with yard turf</li>
+              </ul>
+            </div>
+
+            <div class="mt-auto d-flex gap-2">
+              <button class="btn btn-fg-primary w-50" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">Yard Drainage Quote</button>
+              <a href="about.html" class="btn btn-fg-outline w-50">About Team</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAR -->
+  <section class="fg-section fg-bg-navy text-white text-center py-5">
+    <div class="container max-w-700">
+      <h2 class="display-6 text-white fw-bold mb-3">Unsure Which Solution Your Home Needs?</h2>
+      <p class="text-muted mb-4">Schedule a free on-site structural inspection. Our technician will evaluate wall cracks, take moisture readings, and provide clear written recommendations.</p>
+      <button class="btn btn-fg-primary btn-lg" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
+        <i class="bi bi-clipboard-check-fill me-1"></i> Request Free Inspection
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="fg-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="fg-logo-brand mb-3">
+            <div class="fg-logo-icon">
+              <i class="bi bi-shield-lock-fill"></i>
+            </div>
+            <span>Foundation<span class="text-warning">Guard</span></span>
+          </div>
+          <p class="small text-muted mb-3">
+            Dedicated structural protection and basement waterproofing contractor serving residential and commercial properties with engineer-backed solutions.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="fg-social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="fg-social-icon" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="fg-social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="fg-social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="fg-social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>Company</h5>
+          <ul class="fg-footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#why-choose">Why Choose Us</a></li>
+            <li><a href="reviews.html">Homeowner Reviews</a></li>
+            <li><a href="coming-soon.html">Careers & News</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Services</h5>
+          <ul class="fg-footer-links">
+            <li><a href="service-details.html">Foundation Crack Repair</a></li>
+            <li><a href="services.html#foundation-repair">Foundation Piering & Repair</a></li>
+            <li><a href="services.html#waterproofing">Basement Waterproofing</a></li>
+            <li><a href="services.html#sump-pump">Sump Pump Installation</a></li>
+            <li><a href="services.html#basement-sealing">Basement Sealing</a></li>
+            <li><a href="services.html#drainage">Exterior Drainage Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Contact & Hours</h5>
+          <ul class="fg-footer-links">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-telephone-fill text-warning"></i> (800) 555-GUARD</li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-envelope-fill text-warning"></i> inspection@foundationguard.com</li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-geo-alt-fill text-warning"></i> Metro Region & Tri-State Area</li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-clock-fill text-warning"></i> Mon-Sat: 7:00 AM - 7:00 PM</li>
+          </ul>
+          <button class="btn btn-sm btn-fg-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
+            Request Free Inspection
+          </button>
+        </div>
+      </div>
+
+      <div class="fg-footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          © 2026 FoundationGuard Contractors Inc. All rights reserved.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-muted">Privacy Policy</a>
+          <a href="#" class="text-muted">Terms of Service</a>
+          <a href="#" class="text-muted">Accessibility Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="freeInspectionModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content fg-card border-0 p-4">
+        <h5 class="fw-bold mb-3">Request Free Inspection</h5>
+        <form class="fg-inspection-form needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6"><input type="text" class="form-control fg-form-control" placeholder="Full Name *" required></div>
+            <div class="col-md-6"><input type="tel" class="form-control fg-form-control" placeholder="Phone *" required></div>
+            <div class="col-12"><input type="text" class="form-control fg-form-control" placeholder="Address *" required></div>
+          </div>
+          <button type="submit" class="btn btn-fg-primary w-100 mt-3">Submit Inspection Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
