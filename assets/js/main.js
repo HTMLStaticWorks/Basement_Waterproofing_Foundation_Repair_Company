@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ------------------------------------------------------------------------
    * 1c. Mobile Drawer Links Page Navigation Fix
    * ------------------------------------------------------------------------ */
-  document.querySelectorAll('.mobile-nav-links a[href]').forEach(link => {
+  document.querySelectorAll('.mobile-nav-links a[href], .fg-offcanvas a.fg-logo-brand[href]').forEach(link => {
     link.addEventListener('click', function(e) {
       const targetUrl = this.getAttribute('href');
       if (targetUrl && targetUrl !== '#' && !targetUrl.startsWith('#')) {

@@ -81,7 +81,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link fg-nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                Home
+                Home <i class="bi bi-chevron-down ms-1"></i>
               </a>
               <ul class="dropdown-menu fg-dropdown-menu" aria-labelledby="homeDropdown">
                 <li><a class="dropdown-item fg-dropdown-item active" href="index.html"><i
@@ -116,12 +116,12 @@
   <!-- Mobile Offcanvas Navigation Drawer -->
   <div class="offcanvas offcanvas-end fg-offcanvas" tabindex="-1" id="fgMobileNav" aria-labelledby="fgMobileNavLabel">
     <div class="offcanvas-header border-bottom">
-      <div class="fg-logo-brand fs-5">
+      <a href="index.html" class="fg-logo-brand fs-5 text-decoration-none">
         <div class="fg-logo-icon" style="width:34px; height:34px; font-size:1.1rem;">
           <i class="bi bi-shield-lock-fill"></i>
         </div>
         <span>Foundation<span class="text-warning">Guard</span></span>
-      </div>
+      </a>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between">
@@ -223,8 +223,8 @@
           <div class="position-relative">
             <!-- Structural Showcase Visual Card -->
             <div class="fg-card p-3 shadow-xl overflow-hidden border-2">
-              <svg viewBox="0 0 600 400" class="w-100 rounded-3" style="background-color: #0F172A;"
-                aria-label="Foundation Diagram">
+              <svg viewBox="0 0 600 400" class="w-100 rounded-3 shadow-inner" style="background-color: #0B1320;"
+                aria-label="Foundation Waterproofing Diagram">
                 <defs>
                   <linearGradient id="wallGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#334155" />
@@ -234,36 +234,117 @@
                     <stop offset="0%" stop-color="#EA580C" />
                     <stop offset="100%" stop-color="#D97706" />
                   </linearGradient>
+                  <linearGradient id="soilGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#1F1D1A" />
+                    <stop offset="100%" stop-color="#2D2824" />
+                  </linearGradient>
+                  <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#0284C7" />
+                    <stop offset="100%" stop-color="#0369A1" />
+                  </linearGradient>
+                  <!-- Arrow Markers -->
+                  <marker id="arrowOrange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 8 5 L 0 9 z" fill="#EA580C" />
+                  </marker>
+                  <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 8 5 L 0 9 z" fill="#38BDF8" />
+                  </marker>
                 </defs>
-                <!-- Soil background -->
-                <rect x="0" y="0" width="220" height="400" fill="#292524" opacity="0.9" />
-                <path d="M 220 0 L 220 400" stroke="#78350F" stroke-width="8" />
 
-                <!-- Concrete Wall -->
-                <rect x="220" y="40" width="160" height="320" fill="url(#wallGrad)" stroke="#475569" stroke-width="4" />
+                <!-- 1. Background Grid & Base Layers -->
+                <rect width="600" height="400" fill="#0B1320" />
 
-                <!-- Waterproof Barrier Layer -->
-                <rect x="210" y="40" width="10" height="320" fill="url(#sealGrad)" />
+                <!-- 2. Soil & Groundwater Zone (Left: x=0 to 200) -->
+                <rect x="0" y="45" width="200" height="355" fill="url(#soilGrad)" />
+                <!-- Ground Surface Grade Line -->
+                <rect x="0" y="42" width="200" height="6" fill="#15803D" />
+                <!-- Soil Strata Lines -->
+                <line x1="0" y1="120" x2="195" y2="120" stroke="#44403C" stroke-width="1" stroke-dasharray="8,6" opacity="0.4" />
+                <line x1="0" y1="200" x2="195" y2="200" stroke="#44403C" stroke-width="1" stroke-dasharray="10,8" opacity="0.4" />
+                <line x1="0" y1="280" x2="195" y2="280" stroke="#44403C" stroke-width="1" stroke-dasharray="6,6" opacity="0.4" />
 
-                <!-- Internal Basement Space -->
-                <rect x="380" y="40" width="220" height="320" fill="#090E17" />
-                <rect x="380" y="320" width="220" height="40" fill="#334155" />
+                <!-- Hydrostatic Pressure Thrust Arrows (Safely below callout badge) -->
+                <path d="M 40 135 L 188 135" stroke="#EA580C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowOrange)" />
+                <path d="M 60 175 L 188 175" stroke="#EA580C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowOrange)" />
+                <path d="M 30 215 L 188 215" stroke="#EA580C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowOrange)" />
 
-                <!-- Sump Basin & Pump Visual -->
-                <rect x="420" y="310" width="70" height="50" fill="#1E293B" stroke="#0284C7" stroke-width="2" />
-                <circle cx="455" cy="335" r="16" fill="#0284C7" />
+                <!-- 3. Waterproof Barrier Layer (x=200 to 212) -->
+                <rect x="200" y="45" width="12" height="280" fill="url(#sealGrad)" rx="2" />
 
-                <!-- Annotations -->
-                <text x="30" y="100" fill="#F8FAFC" font-size="14" font-weight="bold">Hydraulic Water Pressure</text>
-                <path d="M 170 100 L 205 100" stroke="#EA580C" stroke-width="3" marker-end="url(#arrow)" />
+                <!-- 4. Reinforced Concrete Wall (x=212 to 352) -->
+                <rect x="212" y="45" width="140" height="280" fill="url(#wallGrad)" stroke="#64748B" stroke-width="2" rx="2" />
+                <!-- Rebar Grid Lines inside Wall -->
+                <line x1="250" y1="55" x2="250" y2="315" stroke="#475569" stroke-width="2" stroke-dasharray="6,8" />
+                <line x1="310" y1="55" x2="310" y2="315" stroke="#475569" stroke-width="2" stroke-dasharray="6,8" />
+                <line x1="220" y1="110" x2="344" y2="110" stroke="#475569" stroke-width="1.5" />
+                <line x1="220" y1="180" x2="344" y2="180" stroke="#475569" stroke-width="1.5" />
+                <line x1="220" y1="250" x2="344" y2="250" stroke="#475569" stroke-width="1.5" />
 
-                <text x="235" y="180" fill="#FFFFFF" font-size="13" font-weight="bold">Reinforced Concrete</text>
-                <text x="215" y="280" fill="#F97316" font-size="12" font-weight="bold">Hydro-Shield Membrane</text>
-                <text x="400" y="280" fill="#38BDF8" font-size="12" font-weight="bold">Sub-Floor Drainage & Sump
-                  System</text>
+                <!-- 5. Concrete Footing (x=190 to 370) -->
+                <rect x="190" y="325" width="176" height="55" fill="url(#wallGrad)" stroke="#64748B" stroke-width="2" rx="3" />
+
+                <!-- 6. Interior Basement Room (Right: x=352 to 600) -->
+                <!-- Interior Space Background -->
+                <rect x="352" y="45" width="248" height="255" fill="#0A0F1D" />
+                <!-- Floor Slab -->
+                <rect x="352" y="300" width="248" height="30" fill="#334155" stroke="#64748B" stroke-width="1.5" />
+
+                <!-- Sub-Floor French Drain Gravel Trench & Perforated Pipe -->
+                <rect x="354" y="330" width="66" height="50" fill="#1E293B" stroke="#0284C7" stroke-width="1" stroke-dasharray="3,3" />
+                <circle cx="387" cy="355" r="14" fill="#0A0F1D" stroke="#0284C7" stroke-width="2.5" />
+                <circle cx="387" cy="355" r="6" fill="#0284C7" opacity="0.6" />
+
+                <!-- Sump Basin & Pump System -->
+                <rect x="445" y="275" width="85" height="95" rx="5" fill="#0F172A" stroke="#0284C7" stroke-width="2" />
+                <rect x="449" y="315" width="77" height="51" fill="url(#waterGrad)" opacity="0.5" />
+                <!-- Pump Body -->
+                <rect x="465" y="305" width="45" height="55" rx="3" fill="#1E293B" stroke="#38BDF8" stroke-width="2" />
+                <!-- Discharge Pipe -->
+                <path d="M 488 305 L 488 120 L 350 120" fill="none" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" />
+
+                <!-- ================= CALLOUT ANNOTATIONS ================= -->
+
+                <!-- Callout 1: Hydrostatic Water Pressure (Soil Top-Left) -->
+                <g>
+                  <rect x="15" y="55" width="170" height="46" rx="6" fill="#1E293B" stroke="#EA580C" stroke-width="1.5" />
+                  <text x="25" y="73" fill="#EA580C" font-size="10" font-weight="bold" letter-spacing="0.05em" font-family="Inter, system-ui, sans-serif">EXTERIOR PRESSURE</text>
+                  <text x="25" y="90" fill="#F8FAFC" font-size="11" font-weight="600" font-family="Inter, system-ui, sans-serif">Hydrostatic Water Load</text>
+                </g>
+
+                <!-- Callout 2: Hydro-Shield Membrane (Leader from x=206 to Callout Pill) -->
+                <g>
+                  <circle cx="206" cy="235" r="3.5" fill="#EA580C" />
+                  <polyline points="206,235 155,235 155,260" fill="none" stroke="#EA580C" stroke-width="1.5" />
+                  <rect x="25" y="260" width="160" height="44" rx="6" fill="#1E293B" stroke="#EA580C" stroke-width="1.5" />
+                  <text x="35" y="278" fill="#F59E0B" font-size="10" font-weight="bold" letter-spacing="0.05em" font-family="Inter, system-ui, sans-serif">SEALING BARRIER</text>
+                  <text x="35" y="294" fill="#F8FAFC" font-size="11" font-weight="600" font-family="Inter, system-ui, sans-serif">Hydro-Shield Membrane</text>
+                </g>
+
+                <!-- Callout 3: Reinforced Concrete Wall (Centered at top of wall) -->
+                <g>
+                  <rect x="215" y="10" width="134" height="28" rx="6" fill="#1E293B" stroke="#64748B" stroke-width="1.5" />
+                  <text x="282" y="28" fill="#F8FAFC" font-size="11" font-weight="bold" text-anchor="middle" font-family="Inter, system-ui, sans-serif">Reinforced Concrete</text>
+                  <line x1="282" y1="38" x2="282" y2="45" stroke="#64748B" stroke-width="1.5" />
+                </g>
+
+                <!-- Callout 4: Interior Sub-Floor Drainage & Sump (Top-Right, cleanly bounded at x=580) -->
+                <g>
+                  <rect x="390" y="55" width="190" height="46" rx="6" fill="#1E293B" stroke="#0284C7" stroke-width="1.5" />
+                  <text x="400" y="73" fill="#38BDF8" font-size="10" font-weight="bold" letter-spacing="0.05em" font-family="Inter, system-ui, sans-serif">INTERIOR EVACUATION</text>
+                  <text x="400" y="90" fill="#F8FAFC" font-size="11" font-weight="600" font-family="Inter, system-ui, sans-serif">Sub-Floor Drain &amp; Sump</text>
+                  <polyline points="485,101 485,115" fill="none" stroke="#0284C7" stroke-width="1.5" />
+                </g>
+
+                <!-- Callout 5: Sub-Slab Drain Trench Callout -->
+                <g>
+                  <rect x="420" y="210" width="160" height="34" rx="5" fill="#1E293B" stroke="#0284C7" stroke-width="1.2" opacity="0.95" />
+                  <text x="500" y="231" fill="#38BDF8" font-size="10.5" font-weight="600" text-anchor="middle" font-family="Inter, system-ui, sans-serif">Dual Sump Station &amp; Basin</text>
+                  <line x1="488" y1="244" x2="488" y2="270" stroke="#0284C7" stroke-width="1.2" stroke-dasharray="3,3" />
+                  <circle cx="488" cy="272" r="3" fill="#0284C7" />
+                </g>
               </svg>
 
-              <div class="p-3 bg-body-tertiary rounded-3 mt-3 d-flex align-items-center justify-content-between">
+              <div class="p-3 bg-body-tertiary rounded-3 mt-3 d-flex flex-wrap align-items-center justify-content-between gap-2">
                 <div>
                   <h6 class="mb-0 fw-bold"><i class="bi bi-shield-check text-success me-1"></i> Multi-Layer
                     HydroProtection System</h6>
@@ -326,7 +407,7 @@
             <div class="row g-3 mb-4">
               <div class="col-sm-6">
                 <div class="d-flex align-items-start gap-3 p-3 rounded-3 border bg-body-tertiary">
-                  <i class="bi bi-droplet-slash text-warning fs-3 mt-1"></i>
+                  <i class="bi bi-droplet-fill text-warning fs-3 mt-1"></i>
                   <div>
                     <h6 class="fw-bold mb-1">Prevent Water Intrusion</h6>
                     <small class="text-muted">Eliminate basement leaks, seepage, and hydro-static floor
@@ -409,9 +490,11 @@
                 </li>
               </ul>
 
-              <div class="p-3 bg-white bg-opacity-10 rounded-3 d-flex align-items-center justify-content-between">
-                <span class="small text-light">Ready to inspect your foundation?</span>
-                <a href="contact.html" class="btn btn-sm btn-warning text-dark fw-bold">Speak With a Specialist</a>
+              <div class="p-3 bg-white bg-opacity-10 rounded-3 d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3 text-center text-sm-start">
+                <span class="small text-light fw-medium">Ready to inspect your foundation?</span>
+                <a href="contact.html" class="btn btn-sm btn-warning text-dark fw-bold fg-btn-hover-effect text-nowrap">
+                  Speak With a Specialist <i class="bi bi-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -433,85 +516,91 @@
       <div class="row g-4">
         <!-- Problem 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="fg-card">
-            <div class="fg-card-icon">
-              <i class="bi bi-border-style"></i>
+          <div class="fg-card h-100 p-0 overflow-hidden">
+            <div class="fg-problem-img-wrap position-relative">
+              <img src="assets/img/problems/foundation-cracks.jpg" alt="Foundation Cracks Diagnostic" class="w-100 object-fit-cover" loading="lazy">
+              <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 font-monospace">STRUCTURAL</span>
             </div>
-            <h4 class="fw-bold mb-2">Foundation Cracks</h4>
-            <p class="text-muted flex-grow-1">Horizontal, stair-step, or hairline vertical cracks in poured concrete or
-              cinder block walls indicating pressure or settlement.</p>
-            <a href="service-details.html" class="fw-bold text-decoration-none">Crack Repair Guide <i
-                class="bi bi-arrow-right"></i></a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="fw-bold mb-2">Foundation Cracks</h4>
+              <p class="text-muted flex-grow-1">Horizontal, stair-step, or hairline vertical cracks in poured concrete or cinder block walls indicating pressure or settlement.</p>
+              <a href="service-details.html" class="fw-bold text-decoration-none mt-auto">Crack Repair Guide <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
 
         <!-- Problem 2 -->
         <div class="col-md-6 col-lg-4">
-          <div class="fg-card">
-            <div class="fg-card-icon">
-              <i class="bi bi-droplet-half"></i>
+          <div class="fg-card h-100 p-0 overflow-hidden">
+            <div class="fg-problem-img-wrap position-relative">
+              <img src="assets/img/problems/basement-water-leaks.jpg" alt="Basement Water Leaks Diagnostic" class="w-100 object-fit-cover" loading="lazy">
+              <span class="badge bg-danger text-white position-absolute top-0 end-0 m-3 font-monospace">SEEPAGE</span>
             </div>
-            <h4 class="fw-bold mb-2">Basement Water Leaks</h4>
-            <p class="text-muted flex-grow-1">Water seeping through wall-floor joints, cove joints, or masonry block
-              pores during rainstorms basement water leaks.</p>
-            <a href="services.html#waterproofing" class="fw-bold text-decoration-none">Waterproofing Guide <i
-                class="bi bi-arrow-right"></i></a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="fw-bold mb-2">Basement Water Leaks</h4>
+              <p class="text-muted flex-grow-1">Water seeping through wall-floor joints, cove joints, or masonry block pores during rainstorms basement water leaks.</p>
+              <a href="services.html#waterproofing" class="fw-bold text-decoration-none mt-auto">Waterproofing Guide <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
 
         <!-- Problem 3 -->
         <div class="col-md-6 col-lg-4">
-          <div class="fg-card">
-            <div class="fg-card-icon">
-              <i class="bi bi-distribute-vertical"></i>
+          <div class="fg-card h-100 p-0 overflow-hidden">
+            <div class="fg-problem-img-wrap position-relative">
+              <img src="assets/img/problems/bowed-walls.jpg" alt="Bowed Foundation Walls Diagnostic" class="w-100 object-fit-cover" loading="lazy">
+              <span class="badge bg-danger text-white position-absolute top-0 end-0 m-3 font-monospace">SOIL PRESSURE</span>
             </div>
-            <h4 class="fw-bold mb-2">Bowed Foundation Walls</h4>
-            <p class="text-muted flex-grow-1">Inward wall deflection caused by expansive clay soils and excessive
-              hydrostatic pressure behind basement walls.</p>
-            <a href="services.html#foundation-repair" class="fw-bold text-decoration-none">Wall Stabilization <i
-                class="bi bi-arrow-right"></i></a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="fw-bold mb-2">Bowed Foundation Walls</h4>
+              <p class="text-muted flex-grow-1">Inward wall deflection caused by expansive clay soils and excessive hydrostatic pressure behind basement walls.</p>
+              <a href="services.html#foundation-repair" class="fw-bold text-decoration-none mt-auto">Wall Stabilization <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
 
         <!-- Problem 4 -->
         <div class="col-md-6 col-lg-4">
-          <div class="fg-card">
-            <div class="fg-card-icon">
-              <i class="bi bi-water"></i>
+          <div class="fg-card h-100 p-0 overflow-hidden">
+            <div class="fg-problem-img-wrap position-relative">
+              <img src="assets/img/problems/standing-water.jpg" alt="Standing Water Diagnostic" class="w-100 object-fit-cover" loading="lazy">
+              <span class="badge bg-primary text-white position-absolute top-0 end-0 m-3 font-monospace">DRAINAGE</span>
             </div>
-            <h4 class="fw-bold mb-2">Standing Water</h4>
-            <p class="text-muted flex-grow-1">Puddles forming in low basement corners due to inadequate interior
-              perimeter drainage or standing water pump failure.</p>
-            <a href="services.html#sump-pump" class="fw-bold text-decoration-none">Sump Solutions <i
-                class="bi bi-arrow-right"></i></a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="fw-bold mb-2">Standing Water</h4>
+              <p class="text-muted flex-grow-1">Puddles forming in low basement corners due to inadequate interior perimeter drainage or standing water pump failure.</p>
+              <a href="services.html#sump-pump" class="fw-bold text-decoration-none mt-auto">Sump Solutions <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
 
         <!-- Problem 5 -->
         <div class="col-md-6 col-lg-4">
-          <div class="fg-card">
-            <div class="fg-card-icon">
-              <i class="bi bi-cloud-haze-fill"></i>
+          <div class="fg-card h-100 p-0 overflow-hidden">
+            <div class="fg-problem-img-wrap position-relative">
+              <img src="assets/img/problems/damp-walls.jpg" alt="Damp Walls Diagnostic" class="w-100 object-fit-cover" loading="lazy">
+              <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 font-monospace">MOISTURE & MOLD</span>
             </div>
-            <h4 class="fw-bold mb-2">Damp Walls</h4>
-            <p class="text-muted flex-grow-1">High basement relative humidity causing mold spores, efflorescence (white
-              mineral salt powder), and decay.</p>
-            <a href="services.html#basement-sealing" class="fw-bold text-decoration-none">Vapor Barrier Sealing <i
-                class="bi bi-arrow-right"></i></a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="fw-bold mb-2">Damp Walls</h4>
+              <p class="text-muted flex-grow-1">High basement relative humidity causing mold spores, efflorescence (white mineral salt powder), and decay.</p>
+              <a href="services.html#basement-sealing" class="fw-bold text-decoration-none mt-auto">Vapor Barrier Sealing <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
 
         <!-- Problem 6 -->
         <div class="col-md-6 col-lg-4">
-          <div class="fg-card">
-            <div class="fg-card-icon">
-              <i class="bi bi-funnel-fill"></i>
+          <div class="fg-card h-100 p-0 overflow-hidden">
+            <div class="fg-problem-img-wrap position-relative">
+              <img src="assets/img/problems/exterior-drainage.jpg" alt="Poor Exterior Drainage Diagnostic" class="w-100 object-fit-cover" loading="lazy">
+              <span class="badge bg-info text-dark position-absolute top-0 end-0 m-3 font-monospace">RUNOFF RISK</span>
             </div>
-            <h4 class="fw-bold mb-2">Poor Exterior Drainage</h4>
-            <p class="text-muted flex-grow-1">Clogged French drains, improper soil grading, or downspouts discharging
-              water directly next to foundation walls.</p>
-            <a href="services.html#drainage" class="fw-bold text-decoration-none">Drainage Solutions <i
-                class="bi bi-arrow-right"></i></a>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="fw-bold mb-2">Poor Exterior Drainage</h4>
+              <p class="text-muted flex-grow-1">Clogged French drains, improper soil grading, or downspouts discharging water directly next to foundation walls.</p>
+              <a href="services.html#drainage" class="fw-bold text-decoration-none mt-auto">Drainage Solutions <i class="bi bi-arrow-right"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -778,7 +867,7 @@
         <button class="btn btn-fg-primary btn-lg" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
           <i class="bi bi-clipboard-check-fill me-1"></i> Get Your Free Inspection
         </button>
-        <a href="tel:8005554827" class="btn btn-fg-outline btn-lg text-white border-white">
+        <a href="tel:8005554827" class="btn btn-fg-outline btn-fg-outline-white btn-lg text-white border-white">
           <i class="bi bi-telephone-fill me-1"></i> Call (800) 555-GUARD
         </a>
       </div>
@@ -790,12 +879,12 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6">
-          <div class="fg-logo-brand mb-3">
+          <a href="index.html" class="fg-logo-brand mb-3 text-decoration-none">
             <div class="fg-logo-icon">
               <i class="bi bi-shield-lock-fill"></i>
             </div>
             <span>Foundation<span class="text-warning">Guard</span></span>
-          </div>
+          </a>
           <p class="small text-muted mb-3">
             Dedicated structural protection and basement waterproofing contractor serving residential and commercial
             properties with engineer-backed solutions.

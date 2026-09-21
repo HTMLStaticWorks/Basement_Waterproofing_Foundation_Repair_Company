@@ -59,7 +59,7 @@
             <!-- Home Dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link fg-nav-link dropdown-toggle active" href="#" id="homeDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
+                Home <i class="bi bi-chevron-down ms-1"></i>
               </a>
               <ul class="dropdown-menu fg-dropdown-menu" aria-labelledby="homeDropdown2">
                 <li><a class="dropdown-item fg-dropdown-item" href="index.html"><i class="bi bi-house-door-fill"></i> Home 1 - Conversion Focus</a></li>
@@ -89,10 +89,10 @@
   <!-- Mobile Drawer -->
   <div class="offcanvas offcanvas-end fg-offcanvas" tabindex="-1" id="fgMobileNav">
     <div class="offcanvas-header border-bottom">
-      <div class="fg-logo-brand fs-5">
+      <a href="index.html" class="fg-logo-brand fs-5 text-decoration-none">
         <div class="fg-logo-icon" style="width:34px; height:34px; font-size:1.1rem;"><i class="bi bi-shield-lock-fill"></i></div>
         <span>Foundation<span class="text-warning">Guard</span></span>
-      </div>
+      </a>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between">
@@ -137,7 +137,7 @@
   </div>
 
   <!-- SPLIT HERO WITH INTERACTIVE SELF-ASSESSMENT WIDGET -->
-  <section class="fg-hero" style="background: linear-gradient(135deg, var(--fg-navy) 0%, #0F172A 100%); color:#FFFFFF;">
+  <section class="fg-hero fg-hero-home2">
     <div class="container py-3 py-lg-4">
       <div class="row align-items-center gy-5">
         
@@ -158,13 +158,13 @@
             <div class="col-6">
               <div class="border-start border-warning border-3 ps-3">
                 <h3 class="text-white fw-bold mb-0">100%</h3>
-                <small class="text-muted">On-Site Structural Verification</small>
+                <small class="text-light opacity-75">On-Site Structural Verification</small>
               </div>
             </div>
             <div class="col-6">
               <div class="border-start border-warning border-3 ps-3">
                 <h3 class="text-white fw-bold mb-0">Dual-Stage</h3>
-                <small class="text-muted">High-GPM Backup Pumps</small>
+                <small class="text-light opacity-75">High-GPM Backup Pumps</small>
               </div>
             </div>
           </div>
@@ -173,7 +173,7 @@
             <button class="btn btn-fg-primary btn-lg" data-bs-toggle="modal" data-bs-target="#freeInspectionModal">
               <i class="bi bi-clipboard-data-fill"></i> Request Engineering Audit
             </button>
-            <a href="#risk-assessment" class="btn btn-fg-outline btn-lg text-white border-secondary">
+            <a href="#risk-assessment" class="btn btn-fg-outline btn-fg-outline-white btn-lg text-white border-secondary">
               Self-Diagnose Risk <i class="bi bi-arrow-down-short"></i>
             </a>
           </div>
@@ -185,7 +185,7 @@
             <div class="d-flex align-items-center justify-content-between mb-3 border-bottom border-secondary pb-3">
               <div>
                 <h5 class="mb-0 text-white fw-bold"><i class="bi bi-ui-checks-grid text-warning me-2"></i> Foundation Self-Assessment</h5>
-                <small class="text-muted">Check symptoms visible in your home</small>
+                <small class="text-light opacity-75">Check symptoms visible in your home</small>
               </div>
               <span id="fgRiskLevel" class="badge bg-success fs-6 px-3 py-2">Low Risk</span>
             </div>
@@ -199,7 +199,7 @@
                 <input type="checkbox" class="fg-assessment-checkbox">
                 <div>
                   <strong class="d-block text-white" style="font-size:0.95rem;">Visible Cracks in Concrete or Block Walls</strong>
-                  <small class="text-muted">Vertical hairline, horizontal, or stair-step crack patterns</small>
+                  <small class="text-light opacity-75">Vertical hairline, horizontal, or stair-step crack patterns</small>
                 </div>
               </label>
 
@@ -207,7 +207,7 @@
                 <input type="checkbox" class="fg-assessment-checkbox">
                 <div>
                   <strong class="d-block text-white" style="font-size:0.95rem;">Water Seepage After Heavy Rainstorms</strong>
-                  <small class="text-muted">Trickles or dampness along cove joint where floor meets wall</small>
+                  <small class="text-light opacity-75">Trickles or dampness along cove joint where floor meets wall</small>
                 </div>
               </label>
 
@@ -215,7 +215,7 @@
                 <input type="checkbox" class="fg-assessment-checkbox">
                 <div>
                   <strong class="d-block text-white" style="font-size:0.95rem;">Musty Odor, Mold, or Efflorescence Powder</strong>
-                  <small class="text-muted">High humidity or white chalky mineral deposit build-up</small>
+                  <small class="text-light opacity-75">High humidity or white chalky mineral deposit build-up</small>
                 </div>
               </label>
 
@@ -223,7 +223,7 @@
                 <input type="checkbox" class="fg-assessment-checkbox">
                 <div>
                   <strong class="d-block text-white" style="font-size:0.95rem;">Sticking Doors or Sloping Upper Floors</strong>
-                  <small class="text-muted">Indicates potential differential footing settlement</small>
+                  <small class="text-light opacity-75">Indicates potential differential footing settlement</small>
                 </div>
               </label>
             </div>
@@ -441,12 +441,12 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6">
-          <div class="fg-logo-brand mb-3">
+          <a href="index.html" class="fg-logo-brand mb-3 text-decoration-none">
             <div class="fg-logo-icon">
               <i class="bi bi-shield-lock-fill"></i>
             </div>
             <span>Foundation<span class="text-warning">Guard</span></span>
-          </div>
+          </a>
           <p class="small text-muted mb-3">
             Dedicated structural protection and basement waterproofing contractor serving residential and commercial properties with engineer-backed solutions.
           </p>
@@ -508,6 +508,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="fgBackToTop" class="fg-back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <!-- FREE INSPECTION MODAL -->
   <div class="modal fade" id="freeInspectionModal" tabindex="-1">

@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse d-none d-lg-flex">
           <ul class="navbar-menu navbar-nav me-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link fg-nav-link dropdown-toggle" href="index.html" data-bs-toggle="dropdown">Home</a>
+              <a class="nav-link fg-nav-link dropdown-toggle" href="index.html" data-bs-toggle="dropdown">Home <i class="bi bi-chevron-down ms-1"></i></a>
               <ul class="dropdown-menu fg-dropdown-menu">
                 <li><a class="dropdown-item fg-dropdown-item" href="index.html">Home 1 - Main</a></li>
                 <li><a class="dropdown-item fg-dropdown-item" href="home-2.html">Home 2 - Technical Edition</a></li>
@@ -73,10 +73,10 @@
   <!-- Mobile Offcanvas -->
   <div class="offcanvas offcanvas-end fg-offcanvas" tabindex="-1" id="fgMobileNav">
     <div class="offcanvas-header border-bottom">
-      <div class="fg-logo-brand fs-5">
+      <a href="index.html" class="fg-logo-brand fs-5 text-decoration-none">
         <div class="fg-logo-icon" style="width:34px; height:34px;"><i class="bi bi-shield-lock-fill"></i></div>
         <span>Foundation<span class="text-warning">Guard</span></span>
-      </div>
+      </a>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-between">
@@ -263,7 +263,7 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-6">
+        <div class="col-md-6 offset-md-3 offset-lg-0 col-lg-6">
           <div class="fg-card p-4 text-center h-100 border-2">
             <span class="badge bg-primary text-white font-monospace mb-2">HEAVY STRUCTURAL</span>
             <h4 class="fw-bold mb-1">Foundation Steel Piering</h4>
@@ -294,12 +294,12 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6">
-          <div class="fg-logo-brand mb-3">
+          <a href="index.html" class="fg-logo-brand mb-3 text-decoration-none">
             <div class="fg-logo-icon">
               <i class="bi bi-shield-lock-fill"></i>
             </div>
             <span>Foundation<span class="text-warning">Guard</span></span>
-          </div>
+          </a>
           <p class="small text-muted mb-3">
             Dedicated structural protection and basement waterproofing contractor serving residential and commercial
             properties with engineer-backed solutions.
@@ -367,6 +367,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="fgBackToTop" class="fg-back-to-top" aria-label="Back to Top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
 
   <!-- Modal -->
   <div class="modal fade" id="freeInspectionModal" tabindex="-1">

@@ -145,7 +145,7 @@ a:hover {
 /* Buttons */
 .btn-fg-primary {
   background-color: var(--fg-accent);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-family: var(--fg-font-heading);
   font-weight: 600;
   padding: 0.75rem 1.6rem;
@@ -161,14 +161,18 @@ a:hover {
 
 .btn-fg-primary:hover {
   background-color: var(--fg-accent-hover);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(234, 88, 12, 0.35);
 }
 
+.btn-fg-primary:hover * {
+  color: #FFFFFF !important;
+}
+
 .btn-fg-secondary {
   background-color: var(--fg-navy);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-family: var(--fg-font-heading);
   font-weight: 600;
   padding: 0.75rem 1.6rem;
@@ -183,9 +187,13 @@ a:hover {
 
 .btn-fg-secondary:hover {
   background-color: var(--fg-navy-light);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border-color: var(--fg-navy-light);
   transform: translateY(-2px);
+}
+
+.btn-fg-secondary:hover * {
+  color: #FFFFFF !important;
 }
 
 .btn-fg-outline {
@@ -205,8 +213,49 @@ a:hover {
 
 .btn-fg-outline:hover {
   background-color: var(--fg-surface-subtle);
-  color: var(--fg-accent);
+  color: var(--fg-accent) !important;
   border-color: var(--fg-accent);
+  transform: translateY(-2px);
+}
+
+.btn-fg-outline:hover * {
+  color: var(--fg-accent) !important;
+}
+
+/* White / Light Outline Buttons (on dark backgrounds or when paired with text-white / border-white) */
+.btn-fg-outline-white,
+.btn-fg-outline.text-white,
+.btn-fg-outline.border-white,
+.bg-dark .btn-fg-outline:not(.btn-fg-primary),
+[style*="linear-gradient"] .btn-fg-outline:not(.btn-fg-primary),
+.fg-assessment-box .btn-fg-outline {
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.btn-fg-outline-white:hover,
+.btn-fg-outline.text-white:hover,
+.btn-fg-outline.border-white:hover,
+.bg-dark .btn-fg-outline:not(.btn-fg-primary):hover,
+[style*="linear-gradient"] .btn-fg-outline:not(.btn-fg-primary):hover,
+.fg-assessment-box .btn-fg-outline:hover,
+.btn-outline-light:hover {
+  background-color: #FFFFFF !important;
+  color: #0B1320 !important;
+  border-color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.btn-fg-outline-white:hover *,
+.btn-fg-outline.text-white:hover *,
+.btn-fg-outline.border-white:hover *,
+.bg-dark .btn-fg-outline:not(.btn-fg-primary):hover *,
+[style*="linear-gradient"] .btn-fg-outline:not(.btn-fg-primary):hover *,
+.fg-assessment-box .btn-fg-outline:hover *,
+.btn-outline-light:hover * {
+  color: #0B1320 !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -245,8 +294,16 @@ a:hover {
   font-family: var(--fg-font-heading);
   font-weight: 800;
   font-size: 1.4rem;
-  color: var(--fg-text-main);
+  color: var(--fg-text-main) !important;
   letter-spacing: -0.03em;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: var(--fg-transition);
+}
+
+.fg-logo-brand:hover {
+  color: var(--fg-text-main) !important;
+  opacity: 0.9;
 }
 
 .fg-logo-icon {
@@ -286,6 +343,16 @@ a:hover {
 
 .fg-nav-link.dropdown-toggle::after {
   display: none !important;
+}
+
+.fg-nav-link .bi-chevron-down {
+  display: inline-block;
+  font-size: 0.72rem;
+  transition: transform 0.25s ease;
+}
+
+.fg-nav-link.dropdown-toggle[aria-expanded="true"] .bi-chevron-down {
+  transform: rotate(180deg);
 }
 
 /* Dropdown styling */
@@ -444,6 +511,26 @@ a:hover {
   border-color: var(--fg-accent);
   box-shadow: var(--fg-shadow-lg);
   transform: translateY(-4px);
+}
+
+/* Diagnostic Issue Card Images */
+.fg-problem-img-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--fg-surface-subtle);
+  position: relative;
+}
+
+.fg-problem-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fg-card:hover .fg-problem-img-wrap img {
+  transform: scale(1.06);
 }
 
 /* Social Icon Styling */
@@ -925,6 +1012,19 @@ a:hover {
   border-color: var(--fg-accent);
 }
 
+/* Hero 2 Responsive Background (Compatible in both Light & Dark Mode) */
+.fg-hero-home2 {
+  position: relative;
+  background: linear-gradient(135deg, rgba(11, 19, 32, 0.88) 0%, rgba(15, 44, 89, 0.84) 100%), url('../img/hero-bg-home2.jpg') center/cover no-repeat;
+  color: #FFFFFF;
+  padding: 4rem 0;
+  transition: var(--fg-transition);
+}
+
+[data-bs-theme="dark"] .fg-hero-home2 {
+  background: linear-gradient(135deg, rgba(6, 11, 18, 0.94) 0%, rgba(11, 19, 32, 0.90) 100%), url('../img/hero-bg-home2.jpg') center/cover no-repeat;
+}
+
 /* Interactive Assessment Box on Home 2 */
 .fg-assessment-box {
   background: linear-gradient(135deg, var(--fg-navy) 0%, #152338 100%);
@@ -1084,4 +1184,26 @@ a:hover {
 [dir="rtl"] .fg-ba-tag-after {
   right: auto;
   left: 1rem;
+}
+
+/* Dark Hero & Dark Section Subtext Contrast Safeguard */
+.fg-hero .text-muted,
+.fg-hero-home2 .text-muted,
+.fg-assessment-box .text-muted,
+.bg-dark .text-muted,
+[style*="linear-gradient"] .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Custom Interactive Button Hover Effects */
+.fg-btn-hover-effect {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.fg-btn-hover-effect:hover {
+  background-color: #F59E0B !important;
+  color: #0F172A !important;
+  border-color: #F59E0B !important;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.45);
 }
