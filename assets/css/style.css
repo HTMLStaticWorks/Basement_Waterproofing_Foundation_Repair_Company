@@ -115,6 +115,58 @@ a:hover {
   color: var(--fg-accent);
 }
 
+/* High Contrast & Visibility Overrides for Light & Dark Modes */
+.text-warning {
+  color: var(--fg-warning) !important;
+}
+
+.text-muted {
+  color: var(--fg-text-muted) !important;
+}
+
+.border-light-subtle {
+  border-color: var(--fg-border) !important;
+}
+
+.bg-body-tertiary {
+  background-color: var(--fg-surface-subtle) !important;
+  color: var(--fg-text-main);
+}
+
+/* Light Mode High-Contrast Specifics */
+html:not([data-bs-theme="dark"]) .text-warning,
+[data-bs-theme="light"] .text-warning {
+  color: #D97706 !important;
+}
+
+html:not([data-bs-theme="dark"]) .fg-hero h1 .text-warning,
+[data-bs-theme="light"] .fg-hero h1 .text-warning {
+  color: #C2410C !important;
+}
+
+html:not([data-bs-theme="dark"]) .fg-logo-brand .text-warning,
+[data-bs-theme="light"] .fg-logo-brand .text-warning {
+  color: #EA580C !important;
+}
+
+html:not([data-bs-theme="dark"]) .fg-hero-badge,
+[data-bs-theme="light"] .fg-hero-badge {
+  background-color: rgba(234, 88, 12, 0.12);
+  color: #C2410C;
+  border-color: rgba(194, 65, 12, 0.3);
+}
+
+/* Dark Mode & Dark Container High Contrast Overrides */
+[data-bs-theme="dark"] .text-warning,
+[data-bs-theme="dark"] .fg-hero h1 .text-warning,
+.fg-bg-navy .text-warning,
+.bg-navy .text-warning,
+.fg-navbar-topbar .text-warning,
+.fg-hero-home2 .text-warning,
+.fg-footer .text-warning {
+  color: #F59E0B !important;
+}
+
 /* Structural Badges & Tags */
 .fg-badge {
   display: inline-flex;
@@ -140,6 +192,22 @@ a:hover {
 [data-bs-theme="dark"] .fg-badge-primary {
   color: #38BDF8;
   border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Home 2 Hero Section Dark Container Fix */
+.fg-hero-home2 {
+  background: linear-gradient(135deg, #0B1320 0%, #152338 100%) !important;
+  color: #FFFFFF !important;
+  border-bottom: 1px solid #1E293B !important;
+}
+
+.fg-hero-home2 h1,
+.fg-hero-home2 h2,
+.fg-hero-home2 h3,
+.fg-hero-home2 h4,
+.fg-hero-home2 h5,
+.fg-hero-home2 h6 {
+  color: #FFFFFF !important;
 }
 
 /* Buttons */
@@ -617,6 +685,54 @@ a:hover {
   border-radius: var(--fg-radius-full);
   margin-bottom: 1.25rem;
   border: 1px solid rgba(234, 88, 12, 0.25);
+}
+
+/* Dedicated High-Contrast Hero Typography System */
+.fg-hero-highlight {
+  color: #C2410C !important;
+  font-weight: 800;
+}
+
+[data-bs-theme="dark"] .fg-hero-highlight {
+  color: #F59E0B !important;
+}
+
+.fg-hero-desc {
+  color: #334155 !important;
+  font-weight: 500;
+}
+
+[data-bs-theme="dark"] .fg-hero-desc {
+  color: #94A3B8 !important;
+}
+
+.fg-text-main {
+  color: #0F172A !important;
+}
+
+[data-bs-theme="dark"] .fg-text-main {
+  color: #F1F5F9 !important;
+}
+
+.fg-text-subtle {
+  color: #334155 !important;
+}
+
+[data-bs-theme="dark"] .fg-text-subtle {
+  color: #CBD5E1 !important;
+}
+
+.fg-hero-border {
+  border-color: #CBD5E1 !important;
+}
+
+[data-bs-theme="dark"] .fg-hero-border {
+  border-color: #1E293B !important;
+}
+
+.fg-hero-card-footer {
+  background-color: var(--fg-surface-subtle) !important;
+  border: 1px solid var(--fg-border) !important;
 }
 
 .fg-trust-strip {
